@@ -1,0 +1,567 @@
+/*
+----- 01 TYPOGRAPHY SYSTEM
+- FONT FAMILY: "Rubik", sans-serif;
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+- FONT WEIGHTS:
+default: 400
+medium: 500
+semi-bold: 600
+bold: 700
+
+- LINE HEIGHTS:
+default: 1
+small: 1.05
+medium: 1.2
+paragraph default: 1.6
+
+----- 02 COLORS
+- primary: #e67e22
+- tints #fdf2e9
+- shades: #cf711f
+- accents
+- greys: #555
+
+----- 05 SHADOWS
+
+----- 06 BORDER-RADIUS
+
+----- 07 WHITESPACE
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+/* ===============================================================
+  1. Reset + Base Styles
+================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  display: inline-block;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+/* ===============================================================
+  2. Root Design Tokens (:root variables)
+================================================================== */
+
+:root {
+  /* Spacing scale (use for margin, padding) */
+  --space-xxs: 0.4rem; /* 4px */
+  --space-xs: 0.8rem; /* 8px */
+  --space-sm: 1.2rem; /* 12px */
+  --space-md: 1.6rem; /* 16px */
+  --space-lg: 2.4rem; /* 24px */
+  --space-xl: 3.2rem; /* 32px */
+  --space-2xl: 4.8rem; /* 48px */
+  --space-3xl: 6.4rem; /* 64px */
+  --space-4xl: 8rem; /* 80px */
+  --space-5xl: 9.6rem; /* 96px */
+  --space-6xl: 12.8rem; /* 128px */
+  --space-7xl: 16rem; /* 160px */
+
+  /* Typography */
+  --font-xxs: 1rem; /* 10px */
+  --font-xs: 1.2rem; /* 12px */
+  --font-sm: 1.4rem; /* 14px */
+  --font-base: 1.6rem; /* 16px */
+  --font-md: 1.8rem; /* 18px */
+  --font-lg: 2rem; /* 20px */
+  --font-xl: 2.4rem; /* 24px */
+  --font-2xl: 3rem; /* 30px */
+  --font-3xl: 3.6rem; /* 36px */
+  --font-4xl: 4.4rem; /* 44px */
+  --font-5xl: 5.2rem; /* 52px */
+  --font-6xl: 6.2rem; /* 62px */
+  --font-7xl: 7.4rem; /* 74px */
+  --font-8xl: 8.6rem; /* 86px */
+  --font-9xl: 9.8rem; /* 98px */
+
+  /* Colors */
+  --color-text: #555;
+  --color-heading: #333;
+  --color-primary: #e67e22;
+  --color-primary-tint: #fdf2e9;
+  --color-primary-shades: #cf711f;
+
+  /* Layout */
+  --container-max-width: 120rem; /* 1200px */
+  --container-padding: var(--space-md);
+
+  /* Border Radius */
+  --radius-sm: 0.4rem;
+  --radius-md: 0.8rem;
+  --radius-lg: 1.2rem;
+  --radius-xl: 1.6rem;
+
+  /* Breakpoints (reference only) */
+  --bp-xs: 0px; /* Extra Small (default mobile) */
+  --bp-sm: 480px; /* Small screens (large phones) */
+  --bp-md: 768px; /* Medium screens (tablets) */
+  --bp-lg: 1024px; /* Large screens (laptops) */
+  --bp-xl: 1280px; /* Extra Large (desktops) */
+  --bp-2xl: 1536px; /* 2XL screens (large desktops) */
+}
+
+/* ===============================================================
+  3. Global Layout Styles (containers, spacing)
+================================================================== */
+
+.container {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-3 {
+  font-weight: 700;
+  color: var(--color-heading);
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: var(--font-5xl);
+  font-weight: 700;
+  line-height: 1.05;
+
+  margin-bottom: var(--space-xl);
+}
+
+.heading-secondary {
+  font-size: var(--font-4xl);
+  line-height: 1.2;
+  margin-bottom: var(--space-5xl);
+}
+.preheading {
+  display: block;
+  font-size: var(--font-base);
+  font-weight: 500;
+  color: var(--color-primary-shades);
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+  letter-spacing: 0.75;
+}
+
+.heading-3 {
+  font-size: var(--font-3xl);
+  line-height: 1.2;
+  margin-bottom: var(--space-xl);
+}
+/* ===============================================================
+  4. Section Styles (header, footer, etc.)
+================================================================== */
+
+/* HERO SECTION */
+
+.section-hero {
+  background-color: var(--color-primary-tint);
+  padding: var(--space-2xl) 0 var(--space-5xl) 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5xl);
+  align-items: center;
+}
+
+.hero-description {
+  font-size: var(--font-lg);
+  line-height: 1.6;
+  margin-bottom: var(--space-2xl);
+}
+
+.hero-img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.delivered-meals {
+  display: flex;
+  margin-top: var(--space-4xl);
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img {
+  height: var(--space-2xl);
+  width: var(--space-2xl);
+  border-radius: 50%;
+  margin-right: calc(var(--space-md) * -1);
+  border: 3px solid var(--color-primary-tint);
+}
+
+.delivered-imgs img:last-child {
+  margin-right: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.delivered-text .highlight {
+  color: var(--color-primary-shades);
+  font-weight: 700;
+}
+
+/* HERO SECTION */
+
+/* HEADER SECTION */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-primary-tint);
+  height: var(--space-5xl);
+  padding-inline: var(--space-2xl);
+}
+/* HEADER SECTION */
+/* NAVIGATION */
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.main-nav-link {
+  display: inline-block;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  color: var(--color-heading);
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.4s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: var(--color-primary-shades);
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  background-color: var(--color-primary);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-md);
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: var(--color-primary-shades);
+}
+
+/* NAVIGATION */
+/* HOW TO DO IT SECTION */
+.section-how {
+  padding-block: 9.6rem;
+}
+
+.step-item {
+  column-gap: var(--space-3xl);
+}
+
+.step-item:not(:last-child) {
+  margin-bottom: var(--space-5xl);
+}
+
+.step-number {
+  font-size: var(--font-8xl);
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: var(--space-sm);
+}
+
+.step-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.step-img-box::before {
+  width: 60%;
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+
+.step-img-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+  z-index: -1
+}
+
+.step-img {
+  width: 35%;
+}
+
+.step-desc {
+  font-size: var(--font-md);
+  line-height: 1.8;
+}
+
+/* HOW TO DO IT SECTION */
+/* ===============================================================
+  5. Components (buttons, cards, etc.)
+================================================================== */
+
+.btn:link,
+.btn:visited {
+  font-size: var(--font-lg);
+  font-weight: 600;
+  padding: var(--space-md) var(--font-2xl);
+  border-radius: var(--radius-md);
+  transition: all 0.7s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: var(--color-primary-shades);
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  color: var(--color-text);
+  background-color: #fff;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: var(--color-primary-tint);
+
+  /* trick to add border without affecting the whole layout */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+.logo img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===============================================================
+  6. Utility Classes (helpers: margin, alignment, etc.)
+================================================================== */
+/* Padding Utilities */
+
+/* Margin Utilities */
+.m-r-sm {
+  margin-right: var(--space-sm);
+}
+
+.m-r-md {
+  margin-right: var(--space-md);
+}
+
+/* Flex Utilities */
+
+/* Grid Utilities */
+.grid {
+  display: grid;
+}
+
+/* Grid Columns */
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-cols-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid-cols-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.grid-cols-auto {
+  grid-template-columns: auto;
+}
+
+/* Auto-Fit / Auto-Fill Responsive Grids */
+.grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+.grid-auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+}
+
+/* Grid Alignment (Items - cross axis) */
+.items-start {
+  align-items: start;
+}
+.items-center {
+  align-items: center;
+}
+.items-end {
+  align-items: end;
+}
+
+/* Grid Alignment (Justify Items - main axis) */
+.justify-start {
+  justify-items: start;
+}
+.justify-center {
+  justify-items: center;
+}
+.justify-end {
+  justify-items: end;
+}
+
+/* Justify Content (Main axis - full grid control) */
+.justify-content-start {
+  justify-content: start;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-end {
+  justify-content: end;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+/* Align Content (Cross axis - full grid control) */
+.align-content-start {
+  align-content: start;
+}
+.align-content-center {
+  align-content: center;
+}
+.align-content-end {
+  align-content: end;
+}
+.align-content-between {
+  align-content: space-between;
+}
+.align-content-around {
+  align-content: space-around;
+}
+.align-content-evenly {
+  align-content: space-evenly;
+}
+
+/* Column Span */
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
+.col-span-full {
+  grid-column: 1 / -1;
+}
+
+/* Row Span */
+.row-span-1 {
+  grid-row: span 1 / span 1;
+}
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+.row-span-3 {
+  grid-row: span 3 / span 3;
+}
+.row-span-4 {
+  grid-row: span 4 / span 4;
+}
+.row-span-5 {
+  grid-row: span 5 / span 5;
+}
+.row-span-6 {
+  grid-row: span 6 / span 6;
+}
+.row-span-full {
+  grid-row: 1 / -1;
+}
+/* ===============================================================
+  7. Responsive Overrides
+================================================================== */
+
+/* test grid */
