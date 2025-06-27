@@ -340,7 +340,7 @@ li {
   width: 45%;
   padding-bottom: 45%;
   background-color: #fae5d3;
-  z-index: -1
+  z-index: -1;
 }
 
 .step-img {
@@ -353,6 +353,33 @@ li {
 }
 
 /* HOW TO DO IT SECTION */
+
+/* FEATURED IN SECTION */
+.section-featured {
+  padding: var(--space-2xl) 0 var(--space-xl) 0;
+}
+
+.heading-featured-in {
+  font-size: var(--font-sm);
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: var(--space-lg);
+  color: #999;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: var(--space-xl);
+  filter: grayscale(100%);
+  opacity: 50%;
+}
+/* FEATURED IN SECTION */
 /* ===============================================================
   5. Components (buttons, cards, etc.)
 ================================================================== */
@@ -391,11 +418,11 @@ li {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
-.logo {
+.site-logo {
   height: 2.2rem;
 }
 
-.logo img {
+.site-logo img {
   display: inline-block;
   width: 100%;
   height: 100%;
