@@ -380,6 +380,66 @@ li {
   opacity: 50%;
 }
 /* FEATURED IN SECTION */
+/* MEALS SECTION */
+.section-meals {
+  padding: var(--space-5xl) 0;
+}
+
+.section-meals .section-content {
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.meal {
+  box-shadow: 0 var(--space-lg) var(--space-2xl) rgba(0, 0, 0, 0.075);
+  border-radius: var(--space-md);
+}
+
+.meal-content {
+  padding: var(--space-xl) var(--space-2xl) var(--space-2xl) var(--space-2xl);
+}
+
+.meal-title {
+  font-size: var(--font-xl);
+  color: #333;
+  font-weight: 600;
+  margin-bottom: var(--space-xl);
+}
+
+.meal-tags {
+  margin-bottom: var(--space-sm);
+  display: flex;
+  gap: var(--space-xxs);
+}
+
+.meal-attr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attr {
+  font-size: var(--font-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.meal-icon {
+  --size: var(--space-lg);
+  height: var(--size);
+  width: var(--size);
+  color: var(--color-primary);
+}
+
+.attr-text strong {
+  font-weight: 500;
+}
+
+.meal-img {
+  width: 100%;
+}
+/* MEALS SECTION */
 /* ===============================================================
   5. Components (buttons, cards, etc.)
 ================================================================== */
@@ -428,6 +488,25 @@ li {
   height: 100%;
 }
 
+.item-tag {
+  display: inline-block;
+  padding: var(--space-xxs) var(--space-xs);
+  font-size: var(--font-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 100px;
+}
+
+.tag-vegatarian {
+  background-color: #51cf66;
+}
+.tag-vegan {
+  background-color: #94d82d;
+}
+.tag-paleo {
+  background-color: #ffd43b;
+}
 /* ===============================================================
   6. Utility Classes (helpers: margin, alignment, etc.)
 ================================================================== */
