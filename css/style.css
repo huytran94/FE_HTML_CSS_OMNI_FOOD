@@ -167,7 +167,7 @@ li {
   color: var(--color-primary-shades);
   text-transform: uppercase;
   margin-bottom: var(--space-md);
-  letter-spacing: 0.75;
+  letter-spacing: 0.75px;
 }
 
 .heading-3 {
@@ -393,6 +393,14 @@ li {
 .meal {
   box-shadow: 0 var(--space-lg) var(--space-2xl) rgba(0, 0, 0, 0.075);
   border-radius: var(--space-md);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.meal:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 var(--space-xl) var(--space-3xl) rgba(0, 0, 0, 0.06);
 }
 
 .meal-content {
@@ -439,6 +447,32 @@ li {
 .meal-img {
   width: 100%;
 }
+
+/* diets */
+.diets-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.diets-item {
+  font-size: var(--font-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.diets-item-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-primary);
+}
+
+.link-all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
 /* MEALS SECTION */
 /* ===============================================================
   5. Components (buttons, cards, etc.)
@@ -507,6 +541,21 @@ li {
 .tag-paleo {
   background-color: #ffd43b;
 }
+
+.btn-link-recipes:link,
+.btn-link-recipes:visited {
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 3px;
+  transition: all 0.4s;
+}
+
+.btn-link-recipes:hover,
+.btn-link-recipes:active {
+  color: var(--color-primary-shades);
+  border-bottom-color: transparent;
+}
 /* ===============================================================
   6. Utility Classes (helpers: margin, alignment, etc.)
 ================================================================== */
@@ -519,6 +568,10 @@ li {
 
 .m-r-md {
   margin-right: var(--space-md);
+}
+
+.m-b-2xl {
+  margin-bottom: var(--space-2xl);
 }
 
 /* Flex Utilities */
@@ -665,6 +718,24 @@ li {
 }
 .row-span-full {
   grid-row: 1 / -1;
+}
+
+/* Text Utilities */
+/* Text Alignment */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
 }
 /* ===============================================================
   7. Responsive Overrides
