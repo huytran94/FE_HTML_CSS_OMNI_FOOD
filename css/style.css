@@ -488,13 +488,24 @@ li {
 /* MEALS SECTION */
 /* TESTIMONIALS SECTION */
 .section-testimonials {
-  padding: 9.6rem 0;
+  background-color: var(--color-primary-tint);
+}
+
+.section-testimonials .section-container {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testimonials-container {
+  padding: 9.6rem;
 }
 
 .testimonials {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-2xl);
+  row-gap: var(--space-2xl);
+  column-gap: var(--space-4xl);
 }
 
 .testimonial-img {
@@ -512,9 +523,31 @@ li {
 
 .testimonial-name {
   font-size: var(--font-base);
-  color: #777;
+  color: #6f6f6f;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  padding: var(--space-md);
+}
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
 }
 /* TESTIMONIALS SECTION */
+
 /* ===============================================================
   5. Components (buttons, cards, etc.)
 ================================================================== */
