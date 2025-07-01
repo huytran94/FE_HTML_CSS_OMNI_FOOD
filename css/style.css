@@ -461,7 +461,7 @@ li {
 }
 
 /* diets */
-.diets-item-list {
+/* .diets-item-list {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
@@ -478,7 +478,9 @@ li {
   width: 3rem;
   height: 3rem;
   color: var(--color-primary);
-}
+} */
+
+/* link all recipes */
 
 .link-all-recipes {
   text-align: center;
@@ -547,6 +549,8 @@ li {
   transform: scale(1.1);
 }
 /* TESTIMONIALS SECTION */
+/* PRICING SECTION */
+/* PRICING SECTION */
 
 /* ===============================================================
   5. Components (buttons, cards, etc.)
@@ -629,6 +633,26 @@ li {
 .btn-link-recipes:active {
   color: var(--color-primary-shades);
   border-bottom-color: transparent;
+}
+
+/* list item*/
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.list-item {
+  font-size: var(--font-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.list-item-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-primary);
 }
 /* ===============================================================
   6. Utility Classes (helpers: margin, alignment, etc.)
