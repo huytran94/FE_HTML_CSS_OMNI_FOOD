@@ -550,6 +550,86 @@ li {
 }
 /* TESTIMONIALS SECTION */
 /* PRICING SECTION */
+.section-pricing {
+  padding: var(--space-5xl) 0;
+}
+.pricing-plan {
+  border-radius: var(--radius-lg);
+
+  width: 75%;
+}
+
+.pricing-plan-start {
+  padding: calc(var(--space-2xl) - 0.2rem);
+  border: 2px solid var(--color-primary-tint);
+}
+
+.pricing-plan-complete {
+  padding: var(--space-2xl);
+  background-color: var(--color-primary-tint);
+  position: relative;
+  overflow: hidden;
+}
+
+/* code ribbon */
+.pricing-plan-complete::after {
+  content: "Best value";
+  position: absolute;
+  top: 6%;
+  right: -17%;
+
+  font-size: var(--font-base);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333;
+
+  padding: var(--space-sm) var(--space-4xl);
+
+  background-color: #ffd43b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: rotate(45deg);
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+.plan-name {
+  font-size: var(--font-lg);
+  font-weight: 600;
+  letter-spacing: 0.75;
+  text-transform: uppercase;
+  color: var(--color-primary-shades);
+  margin-bottom: var(--space-xl);
+}
+
+.plan-price {
+  font-size: var(--font-6xl);
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-bottom: var(--space-md);
+}
+
+.plan-price .currency {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan-text {
+  font-size: var(--font-base);
+  line-height: 1.8;
+  color: #6f6f6f;
+}
+
+.plan-sign-up {
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
 /* PRICING SECTION */
 
 /* ===============================================================
@@ -679,6 +759,10 @@ li {
   display: grid;
 }
 
+grid:not(:last-child) {
+  margin-bottom: var(--space-5xl);
+}
+
 /* Grid Columns */
 .grid-cols-1 {
   grid-template-columns: repeat(1, 1fr);
@@ -752,6 +836,14 @@ li {
   justify-content: space-evenly;
 }
 
+/* Justify self (Main axis - full grid control) */
+.justify-self-start {
+  justify-self: start;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
 /* Align Content (Cross axis - full grid control) */
 .align-content-start {
   align-content: start;
