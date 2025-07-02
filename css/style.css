@@ -630,6 +630,37 @@ li {
   text-align: center;
   margin-top: var(--space-2xl);
 }
+/* plan details */
+.plan-details {
+  font-size: var(--font-base);
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* feature */
+.feature-icon {
+  color: var(--color-primary);
+  height: var(--space-xl);
+  width: var(--space-xl);
+
+  background-color: var(--color-primary-tint);
+  border-radius: 50%;
+
+  margin-bottom: var(--space-xl);
+  padding: var(--space-md);
+}
+
+.feature-title {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: #333;
+  margin-bottom: var(--space-md);
+}
+
+.feature-text {
+  font-size: var(--font-md);
+  line-height: 1.8;
+}
 /* PRICING SECTION */
 
 /* ===============================================================
@@ -749,7 +780,7 @@ li {
 }
 
 .m-b-2xl {
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-2xl) !important;
 }
 
 /* Flex Utilities */
@@ -759,7 +790,7 @@ li {
   display: grid;
 }
 
-grid:not(:last-child) {
+.grid:not(:last-child) {
   margin-bottom: var(--space-5xl);
 }
 
