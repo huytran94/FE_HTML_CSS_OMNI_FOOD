@@ -121,6 +121,7 @@ li {
   --color-primary: #e67e22;
   --color-primary-tint: #fdf2e9;
   --color-primary-shades: #cf711f;
+  --color-primary-shades-2: #eb984e;
 
   /* Layout */
   --container-max-width: 120rem; /* 1200px */
@@ -240,7 +241,7 @@ li {
 }
 
 .delivered-text {
-  font-size: 1.8rem;
+  font-size: var(--font-md);
   font-weight: 500;
   line-height: 1.3;
 }
@@ -260,6 +261,7 @@ li {
   background-color: var(--color-primary-tint);
   height: var(--space-5xl);
   padding-inline: var(--space-2xl);
+  gap: var(--space-xl);
 }
 /* HEADER SECTION */
 /* NAVIGATION */
@@ -277,7 +279,7 @@ li {
 .main-nav-link:visited {
   color: var(--color-heading);
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: var(--font-md);
   transition: all 0.4s;
 }
 
@@ -303,7 +305,7 @@ li {
 /* NAVIGATION */
 /* HOW TO DO IT SECTION */
 .section-how {
-  padding-block: 9.6rem;
+  padding-block: var(--space-5xl);
 }
 
 .step-item {
@@ -398,8 +400,8 @@ li {
 }
 
 .section-meals .section-content {
-  column-gap: 6.4rem;
-  row-gap: 9.6rem;
+  column-gap: var(--space-3xl);
+  row-gap: var(--space-5xl);
 }
 
 .meal {
@@ -484,7 +486,7 @@ li {
 
 .link-all-recipes {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: var(--font-md);
 }
 
 /* MEALS SECTION */
@@ -500,7 +502,7 @@ li {
 }
 
 .testimonials-container {
-  padding: 9.6rem;
+  padding: var(--space-5xl);
 }
 
 .testimonials {
@@ -617,7 +619,7 @@ li {
 .plan-price .currency {
   font-size: 3rem;
   font-weight: 500;
-  margin-right: 0.8rem;
+  margin-right: var(--space-xs);
 }
 
 .plan-text {
@@ -662,18 +664,104 @@ li {
   line-height: 1.8;
 }
 /* PRICING SECTION */
+/* CTA SECTION */
+.section-cta {
+  padding: var(--space-5xl) 0;
+}
+
+.section-cta .cta {
+  /* background-color: var(--color-primary); */
+  box-shadow: 0 var(--space-lg) var(--space-2xl) rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+
+  overflow: hidden;
+}
+
+.cta-text-box {
+  color: #45260a;
+  padding: var(--space-2xl) var(--space-3xl) var(--space-3xl) var(--space-3xl);
+}
+
+.cta-text-box .heading-secondary {
+  color: inherit;
+  margin-bottom: var(--space-xl);
+}
+
+.cta-text-box .cta-text {
+  font-size: var(--font-md);
+  line-height: var(--lh-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url("../content/img/eating.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: var(--space-xl);
+  row-gap: var(--space-lg);
+}
+
+.cta-form label {
+  display: block;
+  font-size: var(--font-base);
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  font-size: var(--font-md);
+  font-family: inherit;
+  color: inherit;
+
+  border: none;
+  border-radius: 9px;
+  background-color: var(--color-primary-tint);
+
+  padding: var(--space-sm);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+/* CTA SECTION */
 
 /* ===============================================================
   5. Components (buttons, cards, etc.)
 ================================================================== */
-
+.btn,
 .btn:link,
 .btn:visited {
   font-size: var(--font-lg);
   font-weight: 600;
-  padding: var(--space-md) var(--font-2xl);
+  padding: var(--space-md) var(--space-xl);
   border-radius: var(--radius-md);
+  cursor: pointer;
   transition: all 0.7s;
+}
+
+.btn {
+  border: none;
+  font-family: inherit;
 }
 
 .btn--full:link,
@@ -699,6 +787,18 @@ li {
 
   /* trick to add border without affecting the whole layout */
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: var(--color-primary-tint);
+  padding: var(--space-sm);
+  align-self: end;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .site-logo {
@@ -765,6 +865,12 @@ li {
   height: 3rem;
   color: var(--color-primary);
 }
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
 /* ===============================================================
   6. Utility Classes (helpers: margin, alignment, etc.)
 ================================================================== */
@@ -815,6 +921,11 @@ li {
 }
 .grid-cols-auto {
   grid-template-columns: auto;
+}
+
+/* grid-column-2-1 */
+.grid-cols-2-1 {
+  grid-template-columns: 2fr 1fr;
 }
 
 /* Auto-Fit / Auto-Fill Responsive Grids */
