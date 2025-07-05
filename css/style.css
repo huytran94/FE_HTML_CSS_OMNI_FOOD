@@ -666,7 +666,7 @@ li {
 /* PRICING SECTION */
 /* CTA SECTION */
 .section-cta {
-  padding: var(--space-5xl) 0;
+  padding: var(--space-2xl) 0 var(--space-6xl) 0;
 }
 
 .section-cta .cta {
@@ -744,6 +744,86 @@ li {
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
 /* CTA SECTION */
+/* FOOTER */
+.footer {
+  padding: var(--space-5xl) 0 var(--space-6xl) 0;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: var(--space-xl);
+}
+
+.footer-logo-img {
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.social-icon {
+  width: var(--space-lg);
+  height: var(--space-lg);
+}
+
+.copyright {
+  font-size: var(--font-sm);
+  line-height: 1.6;
+  color: #767676;
+
+  margin-top: auto;
+}
+
+.contact-info {
+  font-style: normal;
+  font-size: var(--font-base);
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: var(--space-lg);
+}
+
+.footer-heading {
+  font-size: var(--font-md);
+  font-weight: 500;
+  margin-bottom: var(--space-2xl);
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: var(--font-base);
+  color: #767676;
+  transition: all 0.4s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}
+
+/* FOOTER */
 
 /* ===============================================================
   5. Components (buttons, cards, etc.)
@@ -805,7 +885,7 @@ li {
   height: 2.2rem;
 }
 
-.site-logo img {
+.site-logo .site-logo-img {
   display: inline-block;
   width: 100%;
   height: 100%;
