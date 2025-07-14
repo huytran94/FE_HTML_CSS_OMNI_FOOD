@@ -40,10 +40,14 @@
           </li>
         </ul>
       </nav>
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
     </header>
     <main>
       <section class="section-hero">
-        <div class="container hero">
+        <div class="container hero section-container section-hero-container">
           <div class="hero-text-box">
             <h1 class="heading-primary">
               A healthy meal delivered to your door, every single day
@@ -111,7 +115,9 @@
         </div>
         <div class="section-content container">
           <!-- STEP 01 -->
-          <div class="step-item grid grid-cols-2 .=items-center">
+          <div
+            class="step-item grid grid-cols-2 grid-col-1-xs items-center default-gap"
+          >
             <div class="step-text-box">
               <p class="step-number">01</p>
               <h3 class="heading-3">Tell us what you like (and what not)</h3>
@@ -131,7 +137,9 @@
             </div>
           </div>
           <!-- STEP 02 -->
-          <div class="step-item grid grid-cols-2 items-center">
+          <div
+            class="step-item grid grid-cols-2 grid-col-1-xs items-center default-gap"
+          >
             <div class="step-img-box">
               <img
                 src="./content/img/app/app-screen-2.png"
@@ -150,7 +158,9 @@
             </div>
           </div>
           <!-- STEP 03 -->
-          <div class="step-item grid grid-cols-2 items-center">
+          <div
+            class="step-item grid grid-cols-2 grid-col-1-xs items-center default-gap"
+          >
             <div class="step-text-box">
               <p class="step-number">03</p>
               <h3 class="heading-3">Receive meals at convenient time</h3>
@@ -178,7 +188,9 @@
             Omnifood AI chooses from 5,000 recipes
           </h2>
         </div>
-        <div class="container section-content grid grid-cols-3 m-b-2xl">
+        <div
+          class="container section-content grid grid-cols-3 grid-cols-2-sm grid-col-1-xs m-b-2xl"
+        >
           <div class="meal">
             <div class="meal-img-box">
               <img
@@ -203,7 +215,7 @@
                     class="meal-icon"
                   ></ion-icon>
                   <span class="attr-text"
-                    >NutriScore (Registered): <strong>74</strong>
+                    >NutriScore: <strong>74</strong>
                   </span>
                 </li>
                 <li class="meal-attr">
@@ -241,7 +253,7 @@
                     class="meal-icon"
                   ></ion-icon>
                   <span class="attr-text"
-                    >NutriScore (Registered): <strong>92</strong>
+                    >NutriScore: <strong>92</strong>
                   </span>
                 </li>
                 <li class="meal-attr">
@@ -486,7 +498,7 @@
           </div>
           <div class="section-content container">
             <div
-              class="pricing-plan-wrapper grid grid-cols-2 default-gap m-b-2xl"
+              class="pricing-plan-wrapper grid grid-cols-2 grid-col-1-xs default-gap m-b-2xl"
             >
               <div class="pricing-plan justify-self-end pricing-plan-start">
                 <header class="plan-header">
@@ -570,7 +582,7 @@
               </aside>
             </div>
             <div
-              class="feature-plan-wrapper container grid grid-cols-4 default-gap"
+              class="feature-plan-wrapper container grid grid-cols-4 grid-col-1-xs default-gap"
             >
               <!-- feature 1 -->
               <div class="feature">
@@ -615,10 +627,10 @@
           </div>
         </div>
       </section>
-      <!-- section pricing plan -->
+      <!-- section cta -->
       <section class="section-cta">
         <div class="container section-container">
-          <div class="cta grid grid-cols-2-1">
+          <div class="cta">
             <div class="cta-text-box">
               <h2 class="heading-secondary">Get your first meal for free!</h2>
               <p class="cta-text">
